@@ -57,7 +57,7 @@ func main() {
 	fmt.Printf("--------------port: %v\n", port)
 	r1 := gin.Default()
 	r1.GET("/", func(context *gin.Context) {
-		time.Sleep(time.Second * 5)
+		time.Sleep(time.Second * 65)
 		context.JSON(http.StatusOK, gin.H{
 			"message": "Delayed, Resp time:" + GetCurrentTime(),
 		})
