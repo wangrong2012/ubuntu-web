@@ -28,20 +28,20 @@ func GetCurrentTime() string {
 func main() {
 	var port = "8080" //os.Args[1]
 	fmt.Printf("--------------port: %v\n", port)
-	r := gin.Default()
+	r0 := gin.Default()
 
-	r.GET("/ping", func(context *gin.Context) {
+	r0.GET("/ping", func(context *gin.Context) {
 		context.JSON(http.StatusOK, gin.H{
 			"message": "resp host:" + GetHostName() ,
 		})
 	})
-	r.GET("/", func(context *gin.Context) {
+	r0.GET("/", func(context *gin.Context) {
 		context.JSON(http.StatusOK, gin.H{
 			"message": "time:" + GetCurrentTime(),
 		})
 	})
 
-	r.GET("/delay", func(context *gin.Context) {
+	r0.GET("/delay", func(context *gin.Context) {
 		time.Sleep(time.Second * 65)
 		context.JSON(http.StatusOK, gin.H{
 			"message": "Delayed, Resp time:" + GetCurrentTime(),
@@ -49,7 +49,22 @@ func main() {
 	})
 
 	fmt.Printf("===============port: %v============\n", port)
-	go r.Run(":" + port) // listen and serve on 0.0.0.0:8080
+	go r0.Run(":" + port) // listen and serve on 0.0.0.0:8080
+
+
+    // 9090 for delay response
+	var port1 = "9090" //os.Args[1]
+	fmt.Printf("--------------port: %v\n", port)
+	r1 := gin.Default()
+	r1.GET("/", func(context *gin.Context) {
+		time.Sleep(time.Second * 5)
+		context.JSON(http.StatusOK, gin.H{
+			"message": "Delayed, Resp time:" + GetCurrentTime(),
+		})
+	})
+	fmt.Printf("===============port: %v============\n", port1)
+	go r1.Run(":" + port1) // listen and serve on 0.0.0.0:8080
+
 
 	//阻塞程序
 	select {}
