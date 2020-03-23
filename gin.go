@@ -1,24 +1,53 @@
-package hello
+package main
 
 import (
+	"fmt"
+	"log"
 	"net/http"
+	"os"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
 
-// This function's name is a must. App Engine uses it to drive the requests properly.
-func init() {
-	// Starts a new Gin instance with no middle-ware
-	r := gin.New()
 
-	// Define your handlers
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello World!")
+func GetHostName() string {
+	hostname, err := os.Hostname()
+	if err != nil {
+		log.Fatal(err)
+	}
+	return hostname
+}
+
+func GetCurrentTime() string {
+	timer := time.Now()
+	return timer.String()
+}
+
+
+func main() {
+	var port = "8080" //os.Args[1]
+	fmt.Printf("--------------port: %v\n", port)
+	r := gin.Default()
+/*	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})*/
+	r.GET("/ping", func(context *gin.Context) {
+		context.JSON(http.StatusOK, gin.H{
+			"message": "resp host:" + GetHostName() + "\n",
+		})
 	})
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
+	r.GET("/", func(context *gin.Context) {
+		context.JSON(http.StatusOK, gin.H{
+			"message": "time:" + GetCurrentTime() + "\n",
+		})
+
+		// Handle all requests using net/http
+		http.Handle("/", r)
 	})
 
-	// Handle all requests using net/http
-	http.Handle("/", r)
+	fmt.Printf("===============port: %v============\n", port)
+	r.Run(":"+port) // listen and serve on 0.0.0.0:8080
 }
