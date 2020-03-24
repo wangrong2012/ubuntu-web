@@ -54,16 +54,27 @@ func main() {
 
     // 9090 for delay response
 	var port1 = "9090" //os.Args[1]
-	fmt.Printf("--------------port: %v\n", port)
+	fmt.Printf("--------------port: %v\n", port1)
 	r1 := gin.Default()
 	r1.GET("/", func(context *gin.Context) {
-		time.Sleep(time.Second * 300)
+		time.Sleep(time.Second * 110)
 		context.JSON(http.StatusOK, gin.H{
 			"message": "Delayed, Resp time:" + GetCurrentTime(),
 		})
 	})
 	fmt.Printf("===============port: %v============\n", port1)
-	go r1.Run(":" + port1) // listen and serve on 0.0.0.0:8080
+	go r1.Run(":" + port1) // listen and serve on 0.0.0.0:9090
+
+
+	// 9090 for delay response
+	var port2 = "9999" //os.Args[1]
+	fmt.Printf("--------------port: %v\n", port2)
+	r2 := gin.Default()
+	r2.GET("/", func(context *gin.Context) {
+
+	})
+	fmt.Printf("===============port: %v============\n", port2)
+	go r1.Run(":" + port2) // listen and serve on 0.0.0.0:9999
 
 
 	//阻塞程序
