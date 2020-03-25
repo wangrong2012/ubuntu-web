@@ -70,11 +70,11 @@ func main() {
 	var port2 = "9999" //os.Args[1]
 	fmt.Printf("--------------port: %v\n", port2)
 	r2 := gin.Default()
-	r2.GET("/", func(context *gin.Context) {
+/*	r2.GET("/", func(context *gin.Context) {
 
-	})
+	})*/
 	fmt.Printf("===============port: %v============\n", port2)
-	go r1.Run(":" + port2) // listen and serve on 0.0.0.0:9999
+	go r2.Run(":" + port2) // listen and serve on 0.0.0.0:9999
 
 
 	//阻塞程序
