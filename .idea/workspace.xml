@@ -56,26 +56,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="505" />
+          <entry key="go" value="546" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="505" />
+          <entry key="Go" value="546" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="cmd" value="1" />
-          <entry key="go" value="10" />
+          <entry key="go" value="13" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="1" />
-          <entry key="Go" value="10" />
+          <entry key="Go" value="13" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -86,10 +86,46 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gin.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+            <state relative-caret-position="122">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="e#14#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tcp/tcp-server.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#14#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tcp/tcp-sverver-noResp.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="15" />
+              <folding>
+                <element signature="e#14#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tcp/tcp-client.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="e#14#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,37 +141,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/fmt/print.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4505">
-              <caret line="272" column="5" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/os/exec/exec.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5508">
-              <caret line="336" column="14" selection-start-line="336" selection-start-column="14" selection-end-line="336" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/builtin/builtin.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../github.com/gin-gonic/gin/gin.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5763">
-              <caret line="348" selection-start-line="348" selection-end-line="348" />
+            <state relative-caret-position="159">
+              <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -182,6 +191,10 @@
       <list>
         <option value="$PROJECT_DIR$/gin-multi-port.go" />
         <option value="$PROJECT_DIR$/../../golang-test/curl/curl.go" />
+        <option value="$PROJECT_DIR$/tcp-listen.go" />
+        <option value="$PROJECT_DIR$/tcp-client.go" />
+        <option value="$PROJECT_DIR$/tcp-server.go" />
+        <option value="$PROJECT_DIR$/simple-sverver.go" />
         <option value="$PROJECT_DIR$/gin.go" />
       </list>
     </option>
@@ -302,6 +315,30 @@
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="GOPATH &lt;ubuntu-web&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ubuntu-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;ubuntu-web&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="gin-gonic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ubuntu-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;ubuntu-web&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="gin-gonic" type="462c0819:PsiDirectoryNode" />
+              <item name="gin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ubuntu-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;ubuntu-web&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="golang-test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,6 +362,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../k8s.io/ingress-nginx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wangr\go\src\wangrong.com\ubuntu-web\tcp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -357,13 +399,46 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build tcp-client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="ubuntu-web" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tcp-client.go" />
+      <package value="wangrong.com/ubuntu-web" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tcp-listen.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="ubuntu-web" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tcp-listen.go" />
+      <package value="wangrong.com/ubuntu-web" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tcp-server.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="ubuntu-web" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tcp-server.go" />
+      <package value="wangrong.com/ubuntu-web" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build gin.go" />
       <item itemvalue="Go Build.go build gin-multi-port.go" />
+      <item itemvalue="Go Build.go build tcp-listen.go" />
+      <item itemvalue="Go Build.go build tcp-server.go" />
+      <item itemvalue="Go Build.go build tcp-client.go" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build gin.go" />
+        <item itemvalue="Go Build.go build tcp-server.go" />
+        <item itemvalue="Go Build.go build tcp-client.go" />
+        <item itemvalue="Go Build.go build tcp-listen.go" />
         <item itemvalue="Go Build.go build gin-multi-port.go" />
       </list>
     </recent_temporary>
@@ -372,12 +447,12 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17433414" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12590799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15808824" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18566176" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5827206" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -444,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../github.com/gin-gonic/gin/gin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="348" selection-start-line="348" selection-end-line="348" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../github.com/gin-gonic/gin/context.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
@@ -474,10 +542,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../github.com/gin-gonic/gin/gin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcp/tcp-server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#14#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcp/tcp-sverver-noResp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#14#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcp/tcp-client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#14#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gin.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+        <state relative-caret-position="122">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
           <folding>
             <element signature="e#14#93#0" expanded="true" />
           </folding>

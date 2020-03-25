@@ -1,65 +1,14 @@
-package main
+package tcp
 
 import (
-	"fmt"
-	"log"
 	"net"
-	"net/http"
-	"os"
-	"time"
-
-	"github.com/gin-gonic/gin"
+	"log"
+	"fmt"
 )
 
-
-func GetHostName() string {
-	hostname, err := os.Hostname()
-	if err != nil {
-		log.Fatal(err)
-	}
-	return hostname
-}
-
-func GetCurrentTime() string {
-	timer := time.Now()
-	return timer.String()
-}
-
-
 func main() {
-	var port = "8080" //os.Args[1]
-	fmt.Printf("--------------port: %v\n", port)
-	r0 := gin.Default()
-
-	r0.GET("/ping", func(context *gin.Context) {
-		context.JSON(http.StatusOK, gin.H{
-			"message": "resp host:" + GetHostName() ,
-		})
-	})
-	r0.GET("/", func(context *gin.Context) {
-		context.JSON(http.StatusOK, gin.H{
-			"message": "time:" + GetCurrentTime(),
-		})
-	})
-
-	r0.GET("/delay", func(context *gin.Context) {
-		time.Sleep(time.Second * 65)
-		context.JSON(http.StatusOK, gin.H{
-			"message": "Delayed, Resp time:" + GetCurrentTime(),
-		})
-	})
-
-	fmt.Printf("===============port: %v============\n", port)
-	go r0.Run(":" + port) // listen and serve on 0.0.0.0:8080
-
-
-
-	port2 := "9090"
-	Start(port2)
-
-
-	//阻塞程序
-	select {}
+	port := "9090"
+	Start(port)
 }
 
 // 启动服务器
@@ -84,10 +33,10 @@ func Start(port string) {
 	conns := make(map[string]net.Conn)
 
 	// 消息通道
-	//messageChan := make(chan string, 10)
+	messageChan := make(chan string, 10)
 
 	// 广播消息
-	//go BroadMessages(&conns, messageChan)
+	go BroadMessages(&conns, messageChan)
 
 	// 启动
 	for {
@@ -126,9 +75,6 @@ func BroadMessages(conns *map[string]net.Conn, messages chan string) {
 		}
 	}
 }
-
-
-
 
 // 处理客户端发到服务端的消息，将其扔到通道中
 func Handler(conn net.Conn, conns *map[string]net.Conn, messages chan string) {
