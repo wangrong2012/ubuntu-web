@@ -1,0 +1,7 @@
+FROM ubuntu:16.04
+RUN apt-get update -y && \
+	apt-get install software-properties-common -y && \
+	add-apt-repository ppa:longsleep/golang-backports -y && \
+	apt-get install golang-go curl inetutils-ping net-tools -y && \
+	apt-get install telnet -y && \
+    apt-get install ethtool iperf -y
