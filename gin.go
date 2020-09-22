@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
@@ -49,6 +50,10 @@ func main() {
 		})
 	})
 
+	r0.GET("/getHeader", HandleGetAllData)
+
+
+
 	fmt.Printf("===============port: %v============\n", port)
 	go r0.Run(":" + port) // listen and serve on 0.0.0.0:8080
 
@@ -60,6 +65,24 @@ func main() {
 
 	//阻塞程序
 	select {}
+}
+
+
+func HandleGetAllData(c *gin.Context)  {
+	//log.Print("handle log")
+	body,_ := ioutil.ReadAll(c.Request.Body)
+	fmt.Println("---body/--- \r\n " + string(body))
+
+	fmt.Printf("---header/--- \r\n")
+	for k,v :=range c.Request.Header {
+		fmt.Println(k,v)
+	}
+	//fmt.Println("header \r\n",c.Request.Header)
+
+	c.JSON(200,gin.H{
+		"receive":c.Request.Header,
+	})
+
 }
 
 // 启动服务器
