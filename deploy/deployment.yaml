@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ping-jenkins
+  namespace: saiciaas-test
+spec:
+  selector:
+    matchLabels:
+      app: ping
+  template:
+    metadata:
+      labels:
+        app: ping
+    spec:
+      containers:
+      - image: docker-registry.saicstack.com/base/ubuntu-web
+        imagePullPolicy: IfNotPresent
+        name: ping-k8s
+        ports:
+        - containerPort: 8080
