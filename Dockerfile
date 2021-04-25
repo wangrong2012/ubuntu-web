@@ -1,4 +1,4 @@
-FROM docker-registry.saicstack.com/base/ubuntu-web:base
+FROM registry-nj-uat.fin-shine.com/saiciaas-test/ubuntu-web:base
 #RUN apt-get update -y && \ 
 #	apt-get install software-properties-common -y && \ 
 #	add-apt-repository ppa:longsleep/golang-backports -y && \
